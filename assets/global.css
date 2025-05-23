@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+    
+}
+
+:root{
+    --dark-grey: #323a43;
+
+}
+
+.mobile-only{
+    display: block;
+}
+
+.desktop-only{
+    display: none;
+}
+
+
+@media (width > = 1200px){
+    .mobile-only{
+        display: none;
+    }
+
+    .desktop-only{
+        display: block;
+    }
+}

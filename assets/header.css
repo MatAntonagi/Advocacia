@@ -47,19 +47,38 @@ header{
     }
 }
 
+.menu-mobile.active {
+    display: block;
+    animation: slideInOvershoot 0.6s ease forwards;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-mobile.closing{
+    animation: slideOut 0.4s ease forwards;
+    visibility: visible; /* ainda visível durante a saída */
+    pointer-events: none;
+}
+
 .menu-mobile{
-    display: none;
     position: absolute;
+    z-index: 2;
     width: 100vw;
-    height: 100vh;
-    top: 4.5rem;
-    left: 0;
+    height: calc(100vh - 5rem);
+    top: 4rem;
+    left: -1rem;
     background-color: white;
+    transform: translateX(-100%); /* começa fora da tela à esquerda */
+    transition: transform 0.4s ease;
     padding: 3rem;
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 150%;
     text-align: center;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: none;
     
     & a{
         color: var(--dark-grey);
@@ -68,7 +87,7 @@ header{
     }
 }
 
-#pagesMenuMobile{
+.pagesMenuMobile{
 
     & #pages{
         display: flex;
@@ -77,7 +96,7 @@ header{
         justify-content: center;
     }
 
-    & #menuPages{
+    & .menuPages{
         display: none;
         width: 100%;
         height: min-content;
@@ -87,6 +106,54 @@ header{
     }
 }
 
-@media (width > = 1200px) {
+.menuPages.active{
+    display: block;
+}
+
+.rotateCarret{
+    animation: rotateCarret  forwards;
+}
+
+.iconRotate{
+    animation: iconRotate .2s linear;
+}
+
+@keyframes slideInOvershoot {
+  0% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(1rem); /* passa um pouquinho */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes iconRotate {
+    50%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes rotateCarret {
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@media (width >= 1200px) {
     
 }

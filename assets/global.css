@@ -14,6 +14,10 @@
 
 }
 
+body{
+    background-color: black;
+}
+
 .mobile-only{
     display: block;
 }
@@ -21,7 +25,6 @@
 .desktop-only{
     display: none;
 }
-
 
 @media (width > = 1200px){
     .mobile-only{

@@ -5,6 +5,11 @@ const menuIcon = document.getElementById('menuIcon')
 const pages = document.querySelector('.pages')
 const pagesMenu = document.querySelector('.menuPages')
 const pagesIcon = document.getElementById('pagesIcon')
+const pagesMenuDSK = document.querySelector('.pagesMenuDesktop')
+const pagesDSK = document.querySelector('.pagesDSK')
+const MenuDSK = document.querySelector('.menuPagesDSK')
+const pagesIconDSK = document.getElementById('pagesIconDSK')
+
 
 // Função do menu Versão Mobile.
 function openMenu () {
@@ -57,3 +62,20 @@ function pageMenu () {
 }
 
 pageMenu ()
+
+// Função para hover do menu Pags.
+function pageMenuDSK () {
+    pagesMenuDSK.addEventListener('mouseenter', (event) => {
+        event.preventDefault();
+        MenuDSK.classList.add('active');
+        pagesIconDSK.classList.add('rotateCarret')
+    })
+
+    pagesMenuDSK.addEventListener('mouseleave',(event) => {
+        event.preventDefault();
+        MenuDSK.classList.remove('active');
+        pagesIconDSK.classList.remove('rotateCarret')
+    })
+}
+
+pageMenuDSK ()

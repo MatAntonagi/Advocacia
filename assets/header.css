@@ -69,7 +69,6 @@ nav{
 
 .menu-mobile{
     position: absolute;
-    z-index: 2;
     width: 100vw;
     height: calc(100vh - 5rem);
     top: 4rem;
@@ -90,11 +89,11 @@ nav{
         color: var(--dark-grey);
         display: inline-block;
         margin: .5rem;
+        z-index: 99;
     }
 }
 
 .pagesMenuMobile{
-
     & #pages{
         display: flex;
         gap: .5rem;

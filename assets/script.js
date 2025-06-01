@@ -79,3 +79,67 @@ function pageMenuDSK () {
 }
 
 pageMenuDSK ()
+
+/*-----------------------------------------------
+ JavaScript para carrossel */
+const slideContainer = document.querySelector('.slide-container');
+const slideWelcome = document.querySelector('#welcome');
+const slideExperts = document.querySelector('#experts');
+const slideGreat = document.querySelector('#great');
+let slides = Array.from(document.querySelectorAll('.slide'));
+
+// Clonar o primeiro e o último
+const firstClone = slideWelcome.cloneNode(true);
+const lastClone = slideGreat.cloneNode(true);
+
+// Pega o primeiro filho atual do container
+const firstSlide = slideContainer.firstElementChild;
+
+// Inserir clones no container
+slideContainer.appendChild(firstClone);
+slideContainer.insertBefore(lastClone, firstSlide);
+
+// Atualizar lista de slides após inserir clones
+slides = Array.from(document.querySelectorAll('.slide'));
+const totalSlides = slides.length;
+
+let currentIndex = 1; // começa no primeiro slide real
+
+function showSlide(index, withTransition = true) {
+  if (withTransition) {
+    slideContainer.style.transition = 'transform 0.6s ease-in-out';
+  } else {
+    slideContainer.style.transition = 'none';
+  }
+
+  const slideWidth = slides[0].clientWidth;
+  slideContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+function nextSlide() {
+  currentIndex++;
+  showSlide(currentIndex);
+
+  if (currentIndex === totalSlides - 1) {
+    setTimeout(() => {
+      currentIndex = 1;
+      showSlide(currentIndex, false);
+    }, 600);
+  }
+}
+
+function prevSlide() {
+  currentIndex--;
+  showSlide(currentIndex);
+
+  if (currentIndex === 0) {
+    setTimeout(() => {
+      currentIndex = totalSlides - 2;
+      showSlide(currentIndex, false);
+    }, 600);
+  }
+}
+
+showSlide(currentIndex);
+setInterval(nextSlide, 5000);
+window.addEventListener('resize', () => showSlide(currentIndex, false));

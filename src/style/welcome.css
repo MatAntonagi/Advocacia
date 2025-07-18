@@ -1,20 +1,28 @@
 .carousel-wrapper{
-    position: relative;
     width: 100%;
-    z-index: -1;
     overflow: hidden;
+    position: relative;
+}
+
+#mask{
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    top: 91.5%;
+    width: 100%;
+    height: .75rem;
+    z-index: 1;
 }
 
 .modal{
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .12);
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .slide-container{
+    position: relative;
     display: flex;
     align-items: center;
     width: max-content;
@@ -23,8 +31,9 @@
 
     & #welcome{
         width: 100vw;
-        height: 55vh;
-        background: url(./video/welcome-video-ezgif.com-optimize.gif) center center/ cover;
+        height: 100%;
+        background: url(../assets/video/welcome-video-ezgif.com-optimize.gif) center center;
+        background-size: cover;
 
         & h1{
             padding: 0 1rem;
@@ -33,8 +42,9 @@
     
     & #experts{
         width: 100vw;
-        height: 55vh;
-        background: url(./video/expert-gif.gif) center center/ cover;
+        height: 100%;
+        background: url(../assets/video/expert-gif.gif) center center;
+        background-size: cover;
 
         & h1{
             padding: 0 0;
@@ -43,8 +53,9 @@
     
     & #great{
         width: 100vw;
-        height: 55vh;
-        background: url(./imgs/Statue\ de\ dame\ juge.jpg) center center/ cover;
+        height: 100%;
+        background: url(../assets/video/great-video.gif) center center;
+        background-size: cover;
     }
 
     & .slide{
@@ -53,36 +64,37 @@
         flex-direction: column;
         padding: 4rem 1rem 1rem;
         text-align: center;
+        z-index: 1;
+        opacity: 1;
 
         & h3{
-            z-index: 1;
             color: white;
             font: 400 .85rem/1rem "Poppins", sans-serif;
             letter-spacing: 1px;
+            z-index: 2;
         }
 
         & h1{
             padding: 0 2.5rem;
-            z-index: 1;
+            z-index: 2;
             color: white;
             font: 900 2rem/100% "Playfair Display", sans-serif;
 
             & strong{
-                z-index: 1;
                 color: var(--color-main);
                 font: 900 2rem/100% "Playfair Display", sans-serif;
             }
         }
 
         & span{
-            z-index: 1;
+            z-index: 2;
             color: white;
             font: 400 .75rem/1rem "Poppins", sans-serif;
             margin-top: 1.5rem;
         }
 
         & button{
-            z-index: 1;
+            z-index: 2;
             color: white;
             font: 500 1rem/2rem "Poppins", sans-serif;
             letter-spacing: 1px;
@@ -95,18 +107,14 @@
             padding: .5rem 1rem;
             border: 2px solid transparent;
 
-            &:hover{
+            
+        }
+
+        & button:hover{
+                cursor: pointer;
                 background-color: transparent;
                 border: 2px solid var(--color-main);
             }
-        }
-
-        & img{
-            z-index: 1;
-            margin-top: 2.5rem;
-            max-height: 10px;
-            width: 100vw;
-        }
     }
 }
 
@@ -132,6 +140,38 @@
 
 
 @media (width >= 1200px) {
+
+    #mask{
+        top: 96%;
+        height: 2rem;
+    }
+
+    .slide-container{
+        height: 110vh;
+
+        & .slide{
+            & h3{
+                margin-top: 7%;
+                font-size: 1rem;
+                letter-spacing: .5rem;
+            }
+
+            & h1{
+                max-width: 50rem;
+                font-size: 5rem;
+                line-height: 150%;
+                & strong{
+                    font-size: 5rem;
+                }
+            }
+
+            & span{
+                font-size: 1.25rem;
+                max-width: 47rem;
+                line-height: 150%;
+            }
+        }
+    }
 
 #arrow-left{
     position: absolute;

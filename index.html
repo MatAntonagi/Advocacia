@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imperium Advocacia</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./src/style/index.css">
     <script src="https://kit.fontawesome.com/3423baee94.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <nav>
 
@@ -20,8 +19,8 @@
                 <div id="navMobile">
                     
                     <a href="" class="logo-header">
-                        <img src="./assets/imgs/logo-balance.PNG" alt="Logo Imperium Advocacia">
-                        <img src="./assets/imgs/logo-text.PNG" alt="Imperium Advocacia">
+                        <img src="./src/assets/imgs/logo-balance.PNG" alt="Logo Imperium Advocacia">
+                        <img src="./src/assets/imgs/logo-text.PNG" alt="Imperium Advocacia">
                     </a>
         
                     <a id="btnMenu" href="" class="btnMenuMobile">
@@ -56,29 +55,28 @@
                 <div id="navDesktop">
                     
                     <a href="" class="logo-header">
-                        <img src="./assets/imgs/logo-balance.PNG" alt="Logo Imperium Advocacia">
-                        <img src="./assets/imgs/logo-text.PNG" alt="Imperium Advocacia">
+                        <img src="./src/assets/imgs/logo-balance.PNG" alt="Logo Imperium Advocacia">
+                        <img src="./src/assets/imgs/logo-text.PNG" alt="Imperium Advocacia">
                     </a>
     
                     <ul class="menu-desktop">
-                            <li class="item-list"><a href="">Inicio</a></li>
-                            <li class="pagesMenuDesktop item-list">
-                                <a class="pagesDSK" href="">Paginas <i id="pagesIconDSK" class="fa-solid fa-caret-up"></i></a>
-    
-                                <ul class="menuPagesDSK">
-                                    <li><a href="">Sobre nos</a></li>
-                                    <li><a href="">Pacotes</a></li>
-                                    <li><a href="">Galeria</a></li>
-                                    <li><a href="">FAQ</a></li>
-                                    <li><a href="">Blog</a></li>
-                                </ul>
-                            </li>
-                            <li class="item-list"><a href="">Advogados</a></li>
-                            <li class="item-list"><a href="">Areas de Atuação</a></li>
-                            <li class="item-list"><a href="">Contate-nos</a></li>
-                            <li></li>
-                        </ul>
+                        <li class="item-list"><a href="">Inicio</a></li>
+                        <li class="pagesMenuDesktop item-list">
+                            <a class="pagesDSK" href="">Paginas <i id="pagesIconDSK" class="fa-solid fa-caret-up"></i></a>
 
+                            <ul class="menuPagesDSK">
+                                <li><a href="">Sobre nos</a></li>
+                                <li><a href="">Pacotes</a></li>
+                                <li><a href="">Galeria</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="item-list"><a href="">Advogados</a></li>
+                        <li class="item-list"><a href="">Areas de Atuação</a></li>
+                        <li class="item-list"><a href="">Contate-nos</a></li>
+                        <li></li>
+                    </ul>
                 </div>
 
             </div>
@@ -96,51 +94,65 @@
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
 
+            <img id="mask" src="./src/assets/imgs/mask01.png" alt="">
+
             <div class="slide-container">
+                <div class="modal"></div>
                 
                 <div id="welcome">
-    
                     <div class="slide">
                         <h3>A Better Legal System</h3>
                         <h1>Welcome to <strong>Justly Best</strong> Lawyer Firm</h1>
                         <span>We are a best law firm in family & business industry. With more than 15 years of experience in this area, so you can expect from ys better services.</span>
                         <button>Read More</button>
-                        <img src="./assets/imgs/mask01.png" alt="">
                     </div>
-                    <div class="modal"></div>
-
                 </div>
     
                 <div id="experts">
-
                     <div class="slide">
                         <h3>A Better Legal System</h3>
                         <h1>We Are <strong>Experts In Legal</strong> Services</h1>
                         <span>We are a best law firm in family & business industry. With more than 15 years of experience in this area, so you can expect from ys better services.</span>
                         <button>Read More</button>
-                        <img src="./assets/imgs/mask01.png" alt="">
                     </div>
-                    <div class="modal"></div>
-
                 </div>
     
                 <div id="great">
-
                     <div class="slide">
                         <h3>A Better Legal System</h3>
                         <h1>Great <strong>Lawyers Great</strong> Law Firm</h1>
                         <span>Our Law Firm believes that client's success determines our own. So we ensure both by collaborating with our clients to achieve their goals.</span>
                         <button>Read More</button>
-                        <img src="./assets/imgs/mask01.png" alt="">
                     </div>
-                    <div class="modal"></div>
-
                 </div>
 
             </div>
         </section>
+
+        <section class="box-container">
+            <div class="box">
+                <i class="fa-regular fa-message"></i>
+                <h3>Free Consultation</h3>
+                <div class="divider"></div>
+                <p>Our lawyers will give you legal advice</p>
+            </div>
+
+            <div class="box">
+                <i class="fa-solid fa-gavel"></i>
+                <h3>Personal Lawyer</h3>
+                <div class="divider"></div>
+                <p>Qualified attorney that you can trust</p>
+            </div>
+            
+            <div class="box">
+                <i class="fa-regular fa-file-lines"></i>
+                <h3>Expert Advice</h3>
+                <div class="divider"></div>
+                <p>Lawyer helps you to make the best decision</p>
+            </div>
+        </section>
     </main>
     
-    <script src="./assets/script.js"></script>
+    <script src="./src/main.js"></script>
 </body>
 </html>

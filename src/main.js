@@ -48,17 +48,16 @@ function openMenu () {
 openMenu()
 
 function pageMenu () {
-    pages.addEventListener('click', (event) => {
-        event.preventDefault();
-        if (pagesMenu.classList.contains('active')) {
-            pagesMenu.classList.remove('active');
-            pagesIcon.classList.remove('rotateCarret')
-        } else {
-            pagesMenu.classList.add('active');
-            pagesIcon.classList.add('rotateCarret')
-
-        }
-    })
+  pages.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (pagesMenu.classList.contains('active')) {
+          pagesMenu.classList.remove('active');
+          pagesIcon.classList.remove('rotateCarret')
+      } else {
+          pagesMenu.classList.add('active');
+          pagesIcon.classList.add('rotateCarret')
+      }
+  })
 }
 
 pageMenu ()

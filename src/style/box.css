@@ -1,5 +1,9 @@
 .box-container {
     width: 100%;
+}
+
+.box-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -23,7 +27,7 @@
 
     & h3{
         font: 700 1.25rem/20px "Playfair Display", serif;
-        color: white;
+        color: var(--light);
     }
 
     & .divider{
@@ -34,7 +38,41 @@
 
     & p{
         font: 400 1rem/24px "Poppins", serif;
-        color: white;
+        color: var(--light);
         max-width: 13rem;
+    }
+}
+
+#box-two{
+    background-color: var(--medium-gray);
+
+    & i{
+        color: var(--light);
+    }
+
+    & h3{
+        color: var(--gold);
+    }
+
+    & .divider{
+        border-top: 3px solid var(--light);
+    }
+}
+
+@media (width >= 1200px) {
+    .box-container {
+        position: relative;
+    }
+
+    .box-content {
+        padding: 0 1rem;
+        margin-top: -7rem;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .box {
+        width: 30%;
+        z-index: 2;
     }
 }

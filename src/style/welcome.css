@@ -92,29 +92,6 @@
             font: 400 .75rem/1rem "Poppins", sans-serif;
             margin-top: 1.5rem;
         }
-
-        & button{
-            z-index: 2;
-            color: white;
-            font: 500 1rem/2rem "Poppins", sans-serif;
-            letter-spacing: 1px;
-            margin-top: 1.5rem;
-            
-            width: min-content;
-            height: min-content;
-            background-color: var(--color-main);
-            white-space: nowrap;
-            padding: .5rem 1rem;
-            border: 2px solid transparent;
-
-            
-        }
-
-        & button:hover{
-                cursor: pointer;
-                background-color: transparent;
-                border: 2px solid var(--color-main);
-            }
     }
 }
 
@@ -142,7 +119,7 @@
 @media (width >= 1200px) {
 
     #mask{
-        top: 96%;
+        top: 97.5%;
         height: 2rem;
     }
 
@@ -157,7 +134,7 @@
             }
 
             & h1{
-                max-width: 50rem;
+                max-width: 60rem;
                 font-size: 5rem;
                 line-height: 150%;
                 & strong{

@@ -123,7 +123,7 @@ function nextSlide() {
     setTimeout(() => {
       currentIndex = 1;
       showSlide(currentIndex, false);
-    }, 600);
+    }, 700);
   }
 }
 

@@ -23,17 +23,35 @@
     --teal: #20c997;
     --cyan: #17a2b8;
     --gray: #6c757d;
-    --dark-gray: #323a43;
+    --medium-gray: #323a43;
+    --dark-gray: rgb(46, 53, 61);
     --primary: #007bff;
     --light: #f8f9fa;
 }
 
-body{
-    background-color: white;
-}
-
 main{
     width: 100%;
+}
+
+button{
+    z-index: 2;
+    color: white;
+    font: 500 1rem/2rem "Poppins", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    
+    width: min-content;
+    height: min-content;
+    background-color: var(--color-main);
+    white-space: nowrap;
+    padding: .5rem 1rem;
+    border: 2px solid transparent;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--color-main);
 }
 
 .mobile-only{
